@@ -1,6 +1,7 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
+from tensorflow.keras import layers
 
 
 def display_some_samples(examples, labels):
@@ -15,6 +16,22 @@ def display_some_samples(examples, labels):
         plt.imshow(img, cmap='gray')
         plt.axis('off')
     plt.show()
+
+model = tf.keras.Sequential([
+    layers.Input(shape=[28, 28, 1]),
+    layers.Conv2D(32, (3, 3), activation='relu'),
+    layers.Conv2D(64, (3, 3), activation='relu'),
+    layers.MaxPool2D(),
+    layers.BatchNormalization(),
+
+    layers.Conv2D(128, (3, 3), activation='relu'),
+    layers.MaxPool2D(),
+    layers.BatchNormalization(),
+
+    layers.GlobalAvgPool2D(),
+    layers.Dense(64, activation='relu'),
+    layers.Dense(10, activation='softmax')
+])
 
 if __name__=='__main__':
     (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
