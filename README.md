@@ -12,7 +12,7 @@
   <a href="https://github.com/naseemap47/NumberImages-ComputerVision-python/network">
     <img alt="GitHub forks" src="https://img.shields.io/github/forks/naseemap47/NumberImages-ComputerVision-python?style=flat&logo=Git">
   </a>
-  <a href="https://github.com/naseemap47/NumberImages-ComputerVision-python/blob/main/LICENSE">
+  <a href="https://github.com/naseemap47/NumberImages-ComputerVision-python/blob/master/LICENSE">
     <img alt="GitHub Licence" src="https://img.shields.io/github/license/naseemap47/NumberImages-ComputerVision-python?color=red&style=flat&logo=appveyor">
   </a>
   <a href="https://www.linkedin.com/in/naseem-alassampattil/">
