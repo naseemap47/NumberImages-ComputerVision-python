@@ -54,8 +54,8 @@ if __name__=='__main__':
     x_test = np.expand_dims(x_test, axis=3)
 
     # To Fix Error of categorical_crossentropy loss function
-    y_train = tf.keras.ulits.to_categorical(y_train, 10)
-    y_test = tf.keras.ulits.to_categorical(y_test, 10)
+    y_train = tf.keras.utils.to_categorical(y_train, 10)
+    y_test = tf.keras.utils.to_categorical(y_test, 10)
 
     # Cmpliling the Model
     model.compile(
