@@ -53,8 +53,9 @@ if __name__=='__main__':
     x_train = np.expand_dims(x_train, axis=3)
     x_test = np.expand_dims(x_test, axis=3)
 
-    # Check Dimension of Normalized Data
-    print("x_train Shape = ", x_train.shape)
-    print("y_train Shape = ", y_train.shape)
-    print("x_test Shape = ", x_test.shape)
-    print("y_test Shape = ", y_test.shape)
+    # Cmpliling the Model
+    model.compile(
+        optimizer='adam',
+        loss='categorical_crossentropy',
+        metrics='accuracy'
+    )
