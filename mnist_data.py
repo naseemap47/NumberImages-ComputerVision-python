@@ -59,3 +59,11 @@ if __name__=='__main__':
         loss='categorical_crossentropy',
         metrics='accuracy'
     )
+    
+    # fit the Model - Model Training
+    model.fit(
+        x_train, y_train,
+        validation_split=0.2,
+        batch_size=64,
+        epochs=3
+    )
