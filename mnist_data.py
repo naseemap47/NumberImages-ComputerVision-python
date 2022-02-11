@@ -53,10 +53,14 @@ if __name__=='__main__':
     x_train = np.expand_dims(x_train, axis=3)
     x_test = np.expand_dims(x_test, axis=3)
 
+    # To Fix Error of categorical_crossentropy loss function
+    y_train = tf.keras.ulits.to_categorical(y_train, 10)
+    y_test = tf.keras.ulits.to_categorical(y_test, 10)
+
     # Cmpliling the Model
     model.compile(
         optimizer='adam',
-        loss='sparse_categorical_crossentropy',
+        loss='categorical_crossentropy',
         metrics='accuracy'
     )
     
