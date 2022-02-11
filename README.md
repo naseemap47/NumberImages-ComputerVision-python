@@ -60,4 +60,4 @@ Deep Learning Model to identify Numbers of different hand writings.
 * Create a pull request
 
 ## License
-[![CC0](http://seawisphunter.com/minibuffer/api/MIT-License-transparent.png)](https://github.com/naseemap47/NumberImages-ComputerVision-python/blob/main/LICENSE)
+[![CC0](http://seawisphunter.com/minibuffer/api/MIT-License-transparent.png)](https://github.com/naseemap47/NumberImages-ComputerVision-python/blob/master/LICENSE)
