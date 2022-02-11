@@ -41,4 +41,20 @@ if __name__=='__main__':
     print("x_test Shape = ", x_test.shape)
     print("y_test Shape = ", y_test.shape)
 
-    display_some_samples(x_train, y_train)
+    # To display some sample data
+    if False:
+        display_some_samples(x_train, y_train)
+    
+    # Normalize data
+    x_train = x_train.astype('float32') / 255
+    x_test = x_test.astype('float32') / 255
+
+    # In Model input we need 3 dimensional data
+    x_train = np.expand_dims(x_train, axis=3)
+    x_test = np.expand_dims(x_test, axis=3)
+
+    # Check Dimension of Normalized Data
+    print("x_train Shape = ", x_train.shape)
+    print("y_train Shape = ", y_train.shape)
+    print("x_test Shape = ", x_test.shape)
+    print("y_test Shape = ", y_test.shape)
