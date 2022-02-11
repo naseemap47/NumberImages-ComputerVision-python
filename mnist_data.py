@@ -57,7 +57,8 @@ if __name__=='__main__':
     y_train = tf.keras.utils.to_categorical(y_train, 10)
     y_test = tf.keras.utils.to_categorical(y_test, 10)
 
-    TRAIN = True
+    TRAIN = False
+    TEST = True
 
     if TRAIN:
         # Cmpliling the Model
@@ -83,3 +84,12 @@ if __name__=='__main__':
             model.save(
                 '/home/naseem/My Project/predictNumberwithHandWritingImages-ComputerVision-python/Model.h5'
                 )
+
+    if TEST:
+        saved_model = tf.keras.models.load_model(
+            '/home/naseem/My Project/predictNumberwithHandWritingImages-ComputerVision-python/Model.h5'
+            )
+        saved_model.evaluate(
+            x_test, y_test,
+            batch_size=20
+        )
