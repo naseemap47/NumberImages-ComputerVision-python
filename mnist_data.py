@@ -57,17 +57,29 @@ if __name__=='__main__':
     y_train = tf.keras.utils.to_categorical(y_train, 10)
     y_test = tf.keras.utils.to_categorical(y_test, 10)
 
-    # Cmpliling the Model
-    model.compile(
-        optimizer='adam',
-        loss='categorical_crossentropy',
-        metrics='accuracy'
-    )
+    TRAIN = True
+
+    if TRAIN:
+        # Cmpliling the Model
+        model.compile(
+            optimizer='adam',
+            loss='categorical_crossentropy',
+            metrics='accuracy'
+        )
     
-    # fit the Model - Model Training
-    model.fit(
-        x_train, y_train,
-        validation_split=0.2,
-        batch_size=64,
-        epochs=3
-    )
+        # fit the Model - Model Training
+        model.fit(
+            x_train, y_train,
+            validation_split=0.2,
+            batch_size=64,
+            epochs=3
+        )
+
+        # Save Model in a h5 format
+        import os
+        if os.path.isfile(
+            '/home/naseem/My Project/predictNumberwithHandWritingImages-ComputerVision-python/Model.h5' 
+            ) is False:
+            model.save(
+                '/home/naseem/My Project/predictNumberwithHandWritingImages-ComputerVision-python/Model.h5'
+                )
